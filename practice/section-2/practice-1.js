@@ -1,5 +1,10 @@
 'use strict';
 
 function countSameElements(collection) {
-  return '实现练习要求，并改写该行代码。';
+  const result = {};
+  collection.forEach(item => {
+    result[item] = result[item] ? result[item] + 1 : 1;
+  });
+  const keys = Array.from(new Set(collection))
+  return keys.map(item => ({ key: item, count: result[item] }));
 }

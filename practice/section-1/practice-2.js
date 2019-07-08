@@ -1,5 +1,6 @@
 'use strict';
 
 function collectSameElements(collectionA, collectionB) {
-  return '实现练习要求，并改写该行代码。';
+  const flattenB = collectionB.flat()
+  return collectionA.filter(item => flattenB.includes(item));
 }
